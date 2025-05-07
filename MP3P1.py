@@ -9,6 +9,14 @@ def is_valid_number(value):
         return True
     except ValueError:
         return False
+    
+def format_result(value):
+    if value == -0.0:
+        value = 0.0
+    if value == int(value):
+        return str(int(value))
+    else:
+        return f"{value:.2f}"
 
 def SimpleCalculator():
     while True:
@@ -46,7 +54,7 @@ def SimpleCalculator():
                     continue
                 result = x / y
             print("=" * 23)
-            print('Result: ' + str(result))
+            print(f"Result: {format_result(result)}")
             print("=" * 23)
             pause()
         elif choice == "5":
