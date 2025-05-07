@@ -34,5 +34,9 @@ def TodoList():
         elif choice == "4":
             print("Thankyou for using Simple To Do List!")
             break
+        else:
+            print("Invalid Choice!")
+            pause()
+            continue
 
 TodoList()
