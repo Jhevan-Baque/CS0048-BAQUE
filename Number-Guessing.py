@@ -19,6 +19,12 @@ def NumberGuessing():
                     print(f"You Guessed the number in {attempts} attempt(s).")
                     pause()
                     break
+                elif int(guess) > random_int:
+                    attempts += 1
+                    print("Too high!")
+                elif int(guess) < random_int:
+                    attempts += 1
+                    print("Too low!")
                 else:
                     attempts += 1
         elif choice == "2":
