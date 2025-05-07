@@ -6,7 +6,11 @@ def pause():
 def SimpleCalculator():
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
+        print("=" * 23)
+        print("   SIMPLE CALCULATOR")
+        print("=" * 23)
         print("1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit")
+        print("=" * 23)
         choice = input("Enter your choice (1-5): ")
         if choice in ('1', '2', '3', '4'):
             x = input("Enter first number: ")
@@ -27,7 +31,9 @@ def SimpleCalculator():
                 result = int(x)*int(y)
             elif choice == "4":
                 result = int(x)/int(y)
+            print("=" * 23)
             print('Result: ' + str(result))
+            print("=" * 23)
             pause()
         elif choice == "5":
             print("Thankyou for using Simple Calculator!")
